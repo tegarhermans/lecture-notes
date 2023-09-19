@@ -1,5 +1,5 @@
 ---
-title: "m02-1: motion in two and three dimensions (part 2)"
+title: "m02-2: motion in two and three dimensions (part 2)"
 date: 2023-08-29T09:02:00+07:00
 authors: ['Alexander Iskandar', 'Sparisoma Viridi']
 tags: ['fi1101']

@@ -1,5 +1,5 @@
 ---
-title: "m03-1: force and motion-i (part 2)"
+title: "m03-2: force and motion-i (part 2)"
 date: 2023-09-05T05:23:00+07:00
 authors: ['Alexander Iskandar', 'Sparisoma Viridi']
 tags: ['fi1101']
