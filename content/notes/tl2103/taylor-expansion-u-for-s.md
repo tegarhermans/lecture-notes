@@ -168,3 +168,13 @@ n  utaylor error s
 18 0.99610 0.0068% 286.7796
 19 0.99617 0.0004% 286.7754
 ```
+
+## comparison
+Parameters | Assignment | Program
+:- | :- | :-
+$N$ | 15 | 14
+$u$ | 0.98452 | 0.98452
+$\epsilon$ | 1.1692  |  1.1648
+$s$ | 287.4445 | 287.4445
+
+Values for $N$ and $\epsilon$ are not the same for Assignment and Program.
