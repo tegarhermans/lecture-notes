@@ -22,8 +22,11 @@ differential equations and algebraic equations ([Gustafsson, 2017](https://www.d
 
 
 ## examples
++ alignment clustering index for boid ([html](../0043/))
 + butiran.js, a simple JS-based simulator for agent-based model ([html](https://medium.com/@6unpnp/butiran-js-a-simple-js-based-simulator-for-agent-based-model-cba0e3f597ed))
-+ agent-based model and boid ([html](../0045/))
 + Simulasi ABM untuk Data Sekunder: Pembuatan ODM ([pdf](https://doi.org/10.5281/zenodo.4701236))
 + Interaction between Marine Sectors using System Dynamics for Patimban Deep Sea Port as a Green Port: A Proposed Model ([pdf](https://doi.org/10.1088/1755-1315/799/1/012021))
 
+
+## notes
++ agent-based model and boid ([html](../0045/))
