@@ -50,7 +50,7 @@ $$
 In general a function $f(x)$ can be approximated to $N+1$ terms
 
 $$\tag{3}
-f(x) \approx \sum_{n=0}^N \frac{(x - x_0)^n}{n!} \left. \frac{d^n f(x)}{dx^n} \right|_{x=x_0} = \sum _{n=0}^N g_n(x), 
+f(x) \approx \sum_{n=0}^N \frac{(x - x_0)^n}{n!} \left. \frac{d^n f(x)}{dx^n} \right|_{x=x_0} = \sum _{n=0}^N g_n(x, x_0), 
 $$
 
 which is known as Taylor series. And for $f(x)$ in Eqn (2) it would be similar to
@@ -61,42 +61,36 @@ $$
 
 ### $n = 0$
 $$\tag{5.0}
-g_0(x) = \sin a x_0.
+g_0(x, x_0) = \sin a x_0.
 $$
 
 ### $n = 1$
 $$\tag{5.1}
-g_1(x) = (x - x_0) \cdot a \cos a x_0.
+g_1(x, x_0) = (x - x_0) \cdot a \cos a x_0.
 $$
 
 ### $n = 2$
 $$\tag{5.2}
-g_2(x) = \tfrac12(x - x_0)^2 \cdot -a^2 \sin a x_0.
+g_2(x, x_0) = \tfrac12(x - x_0)^2 \cdot -a^2 \sin a x_0.
 $$
 
 ### $n = 3$
 $$\tag{5.3}
-g_3(x) = \tfrac16 (x - x_0)^3 \cdot -a^3 \cos a x_0.
+g_3(x, x_0) = \tfrac16 (x - x_0)^3 \cdot -a^3 \cos a x_0.
 $$
 
 
 ## general form
 Eqns (5.0) - (5.3) can be represented in
 
-$$\tag{6.0}
-h_0(x) = g_0(x) + g_1(x)
 $$
-
-and
-
-$$\tag{6.1}
-h_1(x) = g_2(x) + g_3(x),
+g_n(x, x_0) = (-1)^{\lfloor \frac12 n \rfloor} \frac{a^n (x - x_0)^n}{n!}
+\left\\{
+\begin{array}{rc}
+\sin a x_0, & n = 0, 2, 4, \dots \newline
+\cos a x_0, & n = 1, 3, 5, \dots
+\end{array}
+\right.
 $$
-
-or
-
-$$\tag{7}
-h_m(x) = g_{2m}(x) + g_{2m+1}(x)
-$$
-
-in general with $m = 0, 1, ..$.
+n
+which holds for all $n$.
