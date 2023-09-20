@@ -264,7 +264,7 @@ s = 287.4445
 
 ## comparison
 Parameters | Assignment | Python | Matlab
-:- | :- | :-
+:- | :- | :- | :-
 $N$ | 15 | 14 | 13
 $u$ | 0.98452 | 0.98452 | 0.98452
 $\epsilon$ | 1.1692  |  1.1648  |  1.1648
