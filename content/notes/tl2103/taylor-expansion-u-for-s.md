@@ -92,5 +92,79 @@ g_n(x, x_0) = (-1)^{\lfloor \frac12 n \rfloor} \frac{a^n (x - x_0)^n}{n!}
 \end{array}
 \right.
 $$
-n
 which holds for all $n$.
+
+
+## code
+```python
+import math
+
+def concentration(x, u):
+  s0 = 350
+  E = 5
+  return s0 * math.exp(x * u / E)
+
+def velocity(x, a):
+  return abs(math.sin(a * x))
+
+def taylorterm(n, x, x0, a):
+  sign = (-1)**math.floor(0.5 * n)
+  an = a**n
+  dxn = (x - x0)**n
+  facn = math.factorial(n)
+  if n % 2 == 0:
+    fx = math.sin(a * x0)
+  else:
+    fx = math.cos(a * x0)
+  
+  h = (sign * an * dxn / facn) * fx
+  return h
+
+a = 4.8
+x = -1
+x0 = 0
+
+print("n  utaylor error s")
+
+N = 20
+velotaylor = 0
+for n in range(N):
+  u = velocity(x, a)
+  velotaylor += taylorterm(n, x, x0, a)
+  err = abs(u - abs(velotaylor))
+  
+  conc = concentration(x, velotaylor)
+  
+  str1 = f'{n:02d}'
+  str2 = f'{velotaylor:0.5f}'
+  str3 = f'{(err*100):0.4f}%'
+  str4 = f'{conc:0.4f}'
+  print(str1, str2, str3, str4)
+
+```
+Code is available https://onecompiler.com/python/3zn4x6dnc.
+
+## result
+```bash
+n  utaylor error s
+00 0.00000 99.6165% 350.0000
+01 -4.80000 380.3835% 914.0938
+02 -4.80000 380.3835% 914.0938
+03 13.63200 1263.5835% 22.9091
+04 13.63200 1263.5835% 22.9091
+05 -7.60166 660.5499% 1600.8115
+06 -7.60166 660.5499% 1600.8115
+07 4.04652 305.0353% 155.8088
+08 4.04652 305.0353% 155.8088
+09 0.31910 67.7065% 328.3609
+10 0.31910 67.7065% 328.3609
+11 1.09982 10.3659% 280.8915
+12 1.09982 10.3659% 280.8915
+13 0.98452 1.1648% 287.4445
+14 0.98452 1.1648% 287.4445
+15 0.99717 0.1003% 286.7181
+16 0.99717 0.1003% 286.7181
+17 0.99610 0.0068% 286.7796
+18 0.99610 0.0068% 286.7796
+19 0.99617 0.0004% 286.7754
+```
