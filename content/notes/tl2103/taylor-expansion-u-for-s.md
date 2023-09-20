@@ -95,7 +95,8 @@ $$
 which holds for all $n$.
 
 
-## code
+## python
+### code
 ```python
 import math
 
@@ -144,7 +145,7 @@ for n in range(N):
 ```
 Code is available https://onecompiler.com/python/3zn4x6dnc.
 
-## result
+### result
 ```bash
 n  utaylor error s
 00 0.00000 99.6165% 350.0000
@@ -169,12 +170,104 @@ n  utaylor error s
 19 0.99617 0.0004% 286.7754
 ```
 
+## matlab
+### code
+```matlab
+% input
+for i =1:inf
+    x = input("x = ");
+    if x <= 0
+        break
+    else
+        disp("x should <= 0");
+    end
+end
+
+
+% parameters
+a = 4.8;
+x0 = 0;
+emin = 0.05;
+
+% iteration
+vtay = 0;
+err = 1;
+N = 20;
+for n = 0:N
+    vtay = vtay + tayt(n, x, x0, a);
+    vact = velo(x, a);
+    err = abs(vact - abs(vtay));
+    if err < emin
+        break
+    end
+end
+
+% concentration of pollutan
+s = conc(x, vtay)
+
+% results
+fprintf('n = %d\n', n);
+fprintf('err = %.4f\n', err * 100);
+fprintf('vtay = %.5f\n', vtay);
+fprintf('s = %.4f\n', s);
+
+% n-th term of taylor series
+function t = tayt(n, x, x0, a)
+    sign = (-1)^floor(0.5 * n);
+    an = a^n;
+    dxn = (x - x0)^n;
+    facn = factorial(n);
+    
+    if mod(n, 2) == 0
+        fx = sin(a * x0);
+    else
+        fx = cos(a * x0);
+    end
+
+    t = (sign * an * dxn / facn) * fx;
+end
+
+% actual velocity
+function v = velo(x, a)
+    v = abs(sin(a * x));
+end
+
+% concentration of pollutant
+function c = conc(x, u)
+    s0 = 350;
+    E = 5;
+    c = s0 * exp(x * u / E);
+end
+```
+
+### result
+```bash
+x = 
+1
+x should <= 0
+x = 
+3
+x should <= 0
+x = 
+-1
+
+s =
+
+  287.4445
+
+n = 13
+err = 1.1648
+vtay = 0.98452
+s = 287.4445
+```
+
+
 ## comparison
-Parameters | Assignment | Program
+Parameters | Assignment | Python | Matlab
 :- | :- | :-
-$N$ | 15 | 14
-$u$ | 0.98452 | 0.98452
-$\epsilon$ | 1.1692  |  1.1648
-$s$ | 287.4445 | 287.4445
+$N$ | 15 | 14 | 13
+$u$ | 0.98452 | 0.98452 | 0.98452
+$\epsilon$ | 1.1692  |  1.1648  |  1.1648
+$s$ | 287.4445 | 287.4445 | 287.4445
 
 Values for $N$ and $\epsilon$ are not the same for Assignment and Program.
