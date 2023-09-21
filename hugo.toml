@@ -13,13 +13,13 @@ enableEmoji = true
 #disqusShortname = "dudung-github-io-blog"
 
 [params]
-author = "Sparisoma Viridi"
+author = "Tegarhermans"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
-description = "Sparisoma Viridi's personal website"
+description = "Tegar Herman's personal website"
 keywords = "blog,developer,personal"
-info = ["Physicist", "Programmer"]
+info = ["Cadets", "Programmer"]
 
-avatarURL = "img/avatar.svg"
+avatarURL = "man-with-turban-on-head.svg"
 
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"
