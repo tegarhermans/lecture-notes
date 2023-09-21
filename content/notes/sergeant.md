@@ -11,12 +11,16 @@ url: "sergeant"
 
 
 
-https://www.flaticon.com/free-animated-icon/barber-pole_9541785?term=barber&page=1&position=1&origin=search&related_id=9541785;\rightarrow SERGEANT BARBERSHOP \leftarrow **Bold Text**
+https://www.flaticon.com/free-animated-icon/barber-pole_9541785?term=barber&page=1&position=1&origin=search&related_id=9541785;
+
+## Heading level 2
+\rightarrow *SERGEANT BARBERSHOP* \leftarrow **Bold Text**
 
 Sergeant Barbershop merupakan barber yang belum lama berdiri di Indonesia. Sergeant Barbershop memberikan pelayanan terbaik untuk anda para pelanggan kami. Alat dan fasilitas yang kami berikan merupakan yang terbaik.
 
 
-Ragu dengan Kami?
+## Ragu dengan Kami?
+
 const labels = Utils.months({count: 7});
 const data = {
   labels: labels,
@@ -45,11 +49,13 @@ const data = {
   }]
 };
 
-Ngantri lama? jangan resah gitu dong
+## Ngantri lama? jangan resah gitu dong
+'''mermaid
+graph TD
   A-(Pesan antrean online) -->B(Datang ketempat dan tunjukkan bukti pemesanan)
   -->C-(Pilih paket cukur rambut)-->D(Bayar dengan cash/cashless)
   -->E-(mau pcaran, nongkrong, ke pesta? siapa takut, kini anda sudah tampan)
-
+'''
 
 Jangan lewatkan diskon menarik!
 Nomor | Periode | Diskon | Informasi
@@ -60,6 +66,7 @@ Nomor | Periode | Diskon | Informasi
 
 Hasil Karya Kami
 https://youtu.be/KVcs2I8cEBw?si=0KIDH_2yKdoP6PXZ
-https://unsplash.com/photos/5st86wYikQQ
-https://unsplash.com/photos/t8_KgUw9d1o
+![gambar 1](/assets/images/gambar1.jpg)
+![gambar 2](/assets/images/gambar2.jpg)
+
 
